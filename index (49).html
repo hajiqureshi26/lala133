@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ✏️ CHANGE: Your name & description -->
+  <title>Abdul Rahman — Creative Portfolio</title>
+  <meta name="description" content="Your Name — Web Designer & Developer. Immersive personal portfolio.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body class="loading">
+
+  <!-- ⏳ PRELOADER -->
+  <div class="preloader" id="preloader">
+    <!-- ✏️ CHANGE: your name -->
+    <div class="preloader__logo">Abdul <span class="grad-text">Rahman</span>.</div>
+    <div class="preloader__bar"><span></span></div>
+  </div>
+
+  <!-- 📊 SCROLL PROGRESS BAR -->
+  <div class="progress-bar" id="progressBar"></div>
+
+  <!-- 🖱️ CUSTOM CURSOR -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ✨ INTERACTIVE PARTICLE BACKGROUND -->
+  <canvas id="particles"></canvas>
+
+  <!-- ================= NAVBAR ================= -->
+  <nav class="nav" id="nav">
+    <div class="nav__container">
+      <!-- ✏️ CHANGE: Your name/logo -->
+      <a href="#home" class="nav__logo">Abdul<span class="grad-text">.</span></a>
+
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav__actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
+        <button class="nav__burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="home">
+      <div class="hero__glow hero__glow--1"></div>
+      <div class="hero__glow hero__glow--2"></div>
+
+      <div class="hero__content container" id="heroContent">
+        <span class="hero__badge reveal">● Available for freelance work</span>
+
+        <!-- ✏️ CHANGE: Your intro & name -->
+        <p class="hero__eyebrow reveal">Hello, I'm</p>
+        <h1 class="reveal"><span class="grad-text">Abdul rahman</span></h1>
+
+        <p class="typed-line reveal">I'm a <span class="typed" id="typed"></span><span class="caret"></span></p>
+
+        <p class="hero__subtitle reveal">
+          I craft immersive digital experiences — beautiful websites, clean code
+          and designs that make brands unforgettable.
+        </p>
+
+        <div class="hero__cta reveal">
+          <a href="#work" class="btn btn--primary magnetic">View My Work <span>↗</span></a>
+          <a href="#contact" class="btn btn--ghost magnetic">Let's Talk</a>
+        </div>
+
+        <!-- ✏️ CHANGE: Your social URLs -->
+        <div class="hero__social reveal">
+          <a href="https://github.com/hajiqureshi26" target="_blank" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2.17c-3.2.7-3.87-1.36-3.87-1.36-.53-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.25 5.66.41.36.78 1.06.78 2.14v3.17c0 .31.21.68.8.56A11.52 11.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/abdul-rahman-qureshi-0444672a8?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S.02 4.88.02 3.5 1.13 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4v16h-4V8zm7.5 0h3.8v2.2h.05c.53-1 1.83-2.2 3.77-2.2 4.03 0 4.78 2.65 4.78 6.1V24h-4v-8.5c0-2.03-.04-4.64-2.83-4.64-2.83 0-3.27 2.2-3.27 4.5V24H8V8z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/rahman_lala_26" target="_blank" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85C2.38 3.92 3.9 2.38 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07 2.7.27.27 2.69.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.2 4.36 2.62 6.78 6.98 6.98 1.28.06 1.69.07 4.95.07s3.67-.01 4.95-.07c4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95C23.73 2.7 21.31.27 16.95.07 15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zm0 10.15A3.99 3.99 0 1 1 16 12a4 4 0 0 1-4 3.99zm6.4-11.85a1.44 1.44 0 1 0 1.44 1.44 1.44 1.44 0 0 0-1.44-1.44z"/></svg>
+          </a>
+          <a href="https://x.com/HajiQureshi26" target="_blank" aria-label="X">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 1.15h3.68l-8.04 9.19L24 22.85h-7.41l-5.8-7.58-6.64 7.58H.47l8.6-9.83L0 1.15h7.59l5.24 6.93zm-1.29 19.5h2.04L6.49 3.24H4.3z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <a href="#work" class="hero__scroll"><span class="mouse"></span>Scroll</a>
+    </section>
+
+    <!-- ================= MARQUEE ================= -->
+    <div class="marquee">
+      <div class="marquee__track">
+        <!-- ✏️ CHANGE: Your technologies -->
+        <div class="marquee__group">
+          <span class="marquee__item">HTML5 <i>✦</i></span><span class="marquee__item">CSS3 <i>✦</i></span>
+          <span class="marquee__item">JavaScript <i>✦</i></span><span class="marquee__item">React <i>✦</i></span>
+          <span class="marquee__item">Figma <i>✦</i></span><span class="marquee__item">Node.js <i>✦</i></span>
+          <span class="marquee__item">UI / UX <i>✦</i></span><span class="marquee__item">Tailwind <i>✦</i></span>
+        </div>
+        <div class="marquee__group" aria-hidden="true">
+          <span class="marquee__item">HTML5 <i>✦</i></span><span class="marquee__item">CSS3 <i>✦</i></span>
+          <span class="marquee__item">JavaScript <i>✦</i></span><span class="marquee__item">React <i>✦</i></span>
+          <span class="marquee__item">Figma <i>✦</i></span><span class="marquee__item">Node.js <i>✦</i></span>
+          <span class="marquee__item">UI / UX <i>✦</i></span><span class="marquee__item">Tailwind <i>✦</i></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= STATS (animated counters) ================= -->
+    <div class="container">
+      <section class="stats reveal-zoom" id="stats">
+        <!-- ✏️ CHANGE: Your numbers -->
+        <div class="stat shine"><h3><span class="counter" data-count="5" data-suffix="+">0</span></h3><p>Years Experience</p></div>
+        <div class="stat shine"><h3><span class="counter" data-count="50" data-suffix="+">0</span></h3><p>Projects Completed</p></div>
+        <div class="stat shine"><h3><span class="counter" data-count="30" data-suffix="+">0</span></h3><p>Happy Clients</p></div>
+        <div class="stat shine"><h3><span class="counter" data-count="12" data-suffix="">0</span></h3><p>Awards Won</p></div>
+      </section>
+    </div>
+
+    <!-- ================= WORK ================= -->
+    <section class="section" id="work">
+      <div class="container">
+        <p class="section__eyebrow reveal">Portfolio</p>
+        <h2 class="section__title reveal">Selected <span class="grad-text">Work</span></h2>
+        <p class="section__desc reveal">Hover to feel the 3D tilt — click any card to flip it and read the story.</p>
+
+        <div class="card-grid">
+
+          <!-- 🖼️ PROJECT 1 — paste your browser image URL in src -->
+          <article class="flip-card reveal" data-tilt tabindex="0" style="transition-delay:.05s">
+            <div class="flip-card__inner">
+              <div class="flip-card__front">
+                <img src="https://picsum.photos/seed/project1/800/620" alt="E-Commerce Store">
+                <div class="card-glare"></div>
+                <div class="flip-card__label">
+                  <div><h3>E-Commerce Store</h3><span>Web Design & Dev</span></div>
+                  <span class="flip-hint">↻ click to flip</span>
+                </div>
+              </div>
+              <div class="flip-card__back">
+                <span class="flip-card__num grad-text">01</span>
+                <h3>E-Commerce Store</h3>
+                <p>Full online store with cart, secure checkout and custom CMS. Boosted client sales by 140% in 3 months.</p>
+                <span class="flip-card__tags">HTML · CSS · JavaScript · Stripe</span>
+                <span class="flip-card__hint">↩ click to flip back</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 🖼️ PROJECT 2 -->
+          <article class="flip-card reveal" data-tilt tabindex="0" style="transition-delay:.12s">
+            <div class="flip-card__inner">
+              <div class="flip-card__front">
+                <img src="https://picsum.photos/seed/project2/800/620" alt="Fitness App UI">
+                <div class="card-glare"></div>
+                <div class="flip-card__label">
+                  <div><h3>Fitness App UI</h3><span>UI/UX Design</span></div>
+                  <span class="flip-hint">↻ click to flip</span>
+                </div>
+              </div>
+              <div class="flip-card__back">
+                <span class="flip-card__num grad-text">02</span>
+                <h3>Fitness App UI</h3>
+                <p>40+ screens for a workout tracking app — onboarding, dashboards, social feed. Full design system in Figma.</p>
+                <span class="flip-card__tags">Figma · Prototyping · Design System</span>
+                <span class="flip-card__hint">↩ click to flip back</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 🖼️ PROJECT 3 -->
+          <article class="flip-card reveal" data-tilt tabindex="0" style="transition-delay:.19s">
+            <div class="flip-card__inner">
+              <div class="flip-card__front">
+                <img src="https://picsum.photos/seed/project3/800/620" alt="Restaurant Website">
+                <div class="card-glare"></div>
+                <div class="flip-card__label">
+                  <div><h3>Restaurant Website</h3><span>Development</span></div>
+                  <span class="flip-hint">↻ click to flip</span>
+                </div>
+              </div>
+              <div class="flip-card__back">
+                <span class="flip-card__num grad-text">03</span>
+                <h3>Restaurant Website</h3>
+                <p>Responsive site with table reservations, animated menu and Maps integration. Loads in under 1 second.</p>
+                <span class="flip-card__tags">JavaScript · API · SEO</span>
+                <span class="flip-card__hint">↩ click to flip back</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 🖼️ PROJECT 4 -->
+          <article class="flip-card reveal" data-tilt tabindex="0" style="transition-delay:.26s">
+            <div class="flip-card__inner">
+              <div class="flip-card__front">
+                <img src="https://picsum.photos/seed/project4/800/620" alt="Analytics Dashboard">
+                <div class="card-glare"></div>
+                <div class="flip-card__label">
+                  <div><h3>Analytics Dashboard</h3><span>Web App</span></div>
+                  <span class="flip-hint">↻ click to flip</span>
+                </div>
+              </div>
+              <div class="flip-card__back">
+                <span class="flip-card__num grad-text">04</span>
+                <h3>Analytics Dashboard</h3>
+                <p>Interactive SaaS dashboard with live charts, dark mode and exportable reports for a data startup.</p>
+                <span class="flip-card__tags">React · Charts · REST API</span>
+                <span class="flip-card__hint">↩ click to flip back</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section class="section" id="about">
+      <div class="container about">
+        <div class="about__photo reveal-left" data-tilt>
+          <!-- 🖼️ IMAGE: paste your photo URL below -->
+          <img src="https://picsum.photos/seed/profile/640/720" alt="Photo of Your Name">
+          <div class="card-glare"></div>
+          <!-- ✏️ CHANGE: badge texts -->
+          <span class="about__badge about__badge--1">🏆 2+ Years Exp</span>
+          <span class="about__badge about__badge--2">✅ Open to Work</span>
+        </div>
+
+        <div class="about__text reveal-right">
+          <p class="section__eyebrow">About Me</p>
+          <h2 class="section__title">Turning ideas into <span class="grad-text">real products</span></h2>
+          <!-- ✏️ CHANGE: Your bio -->
+          <p>I'm a passionate designer &amp; developer with 2+ years of experience. I love clean design, smooth animations and code that performs.</p>
+          <p>Great websites are a mix of beauty and function — and I bring both to every single project I touch.</p>
+          <div class="about__cta">
+            <a href="#contact" class="btn btn--primary magnetic">Hire Me</a>
+            <!-- ✏️ CHANGE: link to your resume PDF -->
+            <a href="#" class="btn btn--ghost magnetic">Download CV ↓</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SKILLS ================= -->
+    <section class="section" id="skills">
+      <div class="container">
+        <p class="section__eyebrow reveal">Expertise</p>
+        <h2 class="section__title reveal">My <span class="grad-text">Skills</span></h2>
+
+        <div class="skills">
+          <div class="skills__bars reveal-left">
+            <!-- ✏️ CHANGE: skills & data-level % -->
+            <div class="skill"><div class="skill__head"><span>HTML / CSS</span><span>95%</span></div><div class="skill__bar"><div class="skill__fill" data-level="95"></div></div></div>
+            <div class="skill"><div class="skill__head"><span>JavaScript</span><span>90%</span></div><div class="skill__bar"><div class="skill__fill" data-level="90"></div></div></div>
+            <div class="skill"><div class="skill__head"><span>React</span><span>85%</span></div><div class="skill__bar"><div class="skill__fill" data-level="85"></div></div></div>
+            <div class="skill"><div class="skill__head"><span>UI/UX Design</span><span>80%</span></div><div class="skill__bar"><div class="skill__fill" data-level="80"></div></div></div>
+            <div class="skill"><div class="skill__head"><span>Node.js</span><span>75%</span></div><div class="skill__bar"><div class="skill__fill" data-level="75"></div></div></div>
+            <div class="skill"><div class="skill__head"><span>Python</span><span>70%</span></div><div class="skill__bar"><div class="skill__fill" data-level="70"></div></div></div>
+          </div>
+
+          <div class="skills__tools reveal-right shine">
+            <h3>Tools &amp; Technologies</h3>
+            <!-- ✏️ CHANGE: Your tools -->
+            <div class="chips">
+              <span class="chip">Git &amp; GitHub</span><span class="chip">Figma</span>
+              <span class="chip">VS Code</span><span class="chip">Tailwind CSS</span>
+              <span class="chip">Responsive Design</span><span class="chip">REST APIs</span>
+              <span class="chip">SEO</span><span class="chip">Photoshop</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= JOURNEY / TIMELINE ================= -->
+    <section class="section" id="journey">
+      <div class="container">
+        <p class="section__eyebrow reveal">My Path</p>
+        <h2 class="section__title reveal">The <span class="grad-text">Journey</span></h2>
+
+        <div class="timeline">
+          <!-- ✏️ CHANGE: Your experience -->
+          <div class="timeline__item reveal-left">
+            <span class="timeline__dot"></span>
+            <div class="timeline__card shine">
+              <span class="timeline__date">2024 — Present</span>
+              <h3>Freelance Designer &amp; Developer</h3>
+              <span class="timeline__place">Self-employed</span>
+              <p>Building websites and brands for clients worldwide, from startups to established businesses.</p>
+            </div>
+          </div>
+          <div class="timeline__item reveal-right">
+            <span class="timeline__dot"></span>
+            <div class="timeline__card shine">
+              <span class="timeline__date">2022 — 2024</span>
+              <h3>Frontend Developer</h3>
+              <span class="timeline__place">Tech Company Name</span>
+              <p>Shipped responsive interfaces, improved site performance by 60% and mentored junior devs.</p>
+            </div>
+          </div>
+          <div class="timeline__item reveal-left">
+            <span class="timeline__dot"></span>
+            <div class="timeline__card shine">
+              <span class="timeline__date">2020 — 2022</span>
+              <h3>Web Designer</h3>
+              <span class="timeline__place">Agency Name</span>
+              <p>Designed 30+ client websites and learned to bridge the gap between design and code.</p>
+            </div>
+          </div>
+          <div class="timeline__item reveal-right">
+            <span class="timeline__dot"></span>
+            <div class="timeline__card shine">
+              <span class="timeline__date">2019</span>
+              <h3>Started Coding</h3>
+              <span class="timeline__place">Self-taught</span>
+              <p>Wrote my first line of HTML and fell in love with building things for the web.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SERVICES ================= -->
+    <section class="section" id="services">
+      <div class="container">
+        <p class="section__eyebrow reveal">What I Do</p>
+        <h2 class="section__title reveal">My <span class="grad-text">Services</span></h2>
+        <p class="section__desc reveal">Click a card to flip it and see details.</p>
+
+        <div class="card-grid">
+          <article class="flip-card reveal" data-tilt tabindex="0" style="transition-delay:.05s">
+            <div class="flip-card__inner">
+              <div class="flip-card__front flip-card__front--grad g1">
+                <span class="service-icon">🎨</span><h3>Web Design</h3>
+                <span class="flip-hint flip-hint--light">↻ click to flip</span>
+              </div>
+              <div class="flip-card__back">
+                <h3>Web Design</h3>
+                <p>User-centered designs that tell your brand's story — wireframes, mockups and pixel-perfect final UI.</p>
+                <span class="flip-card__hint">↩ click to flip back</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="flip-card reveal" data-tilt tabindex="0" style="transition-delay:.12s">
+            <div class="flip-card__inner">
+              <div class="flip-card__front flip-card__front--grad g2">
+                <span class="service-icon">💻</span><h3>Development</h3>
+                <span class="flip-hint flip-hint--light">↻ click to flip</span>
+              </div>
+              <div class="flip-card__back">
+                <h3>Development</h3>
+                <p>Fast, responsive, accessible websites with modern HTML, CSS &amp; JavaScript. Clean code, smooth motion.</p>
+                <span class="flip-card__hint">↩ click to flip back</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="flip-card reveal" data-tilt tabindex="0" style="transition-delay:.19s">
+            <div class="flip-card__inner">
+              <div class="flip-card__front flip-card__front--grad g3">
+                <span class="service-icon">📱</span><h3>UI / UX Design</h3>
+                <span class="flip-hint flip-hint--light">↻ click to flip</span>
+              </div>
+              <div class="flip-card__back">
+                <h3>UI / UX Design</h3>
+                <p>User research, wireframes and interactive Figma prototypes. Interfaces people actually enjoy using.</p>
+                <span class="flip-card__hint">↩ click to flip back</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="flip-card reveal" data-tilt tabindex="0" style="transition-delay:.26s">
+            <div class="flip-card__inner">
+              <div class="flip-card__front flip-card__front--grad g4">
+                <span class="service-icon">🚀</span><h3>SEO &amp; Speed</h3>
+                <span class="flip-hint flip-hint--light">↻ click to flip</span>
+              </div>
+              <div class="flip-card__back">
+                <h3>SEO &amp; Speed</h3>
+                <p>Performance optimization and on-page SEO so your site ranks higher and loads instantly.</p>
+                <span class="flip-card__hint">↩ click to flip back</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TESTIMONIALS ================= -->
+    <section class="section" id="testimonials">
+      <div class="container">
+        <p class="section__eyebrow reveal">Testimonials</p>
+        <h2 class="section__title reveal">What Clients <span class="grad-text">Say</span></h2>
+
+        <div class="testimonials__wrap reveal-zoom">
+          <div class="testimonials__slider" id="tSlider">
+            <!-- ✏️ CHANGE: client reviews -->
+            <div class="testimonial active">
+              <div class="testimonial__stars">★★★★★</div>
+              <p class="testimonial__quote">"Absolutely stunning work. The website exceeded every expectation and our conversions doubled within weeks. A true professional."</p>
+              <div class="testimonial__author">
+                <img src="https://picsum.photos/seed/client1/100/100" alt="Sarah Johnson">
+                <div><h4>Sarah Johnson</h4><span>CEO, TechStart</span></div>
+              </div>
+            </div>
+            <div class="testimonial">
+              <div class="testimonial__stars">★★★★★</div>
+              <p class="testimonial__quote">"Fast, creative and incredibly detail-oriented. Communication was smooth from day one. I'll hire again for every project."</p>
+              <div class="testimonial__author">
+                <img src="https://picsum.photos/seed/client2/100/100" alt="Mike Chen">
+                <div><h4>Mike Chen</h4><span>Founder, BrandLab</span></div>
+              </div>
+            </div>
+            <div class="testimonial">
+              <div class="testimonial__stars">★★★★★</div>
+              <p class="testimonial__quote">"The animations and design quality are on another level. Our users constantly compliment the new site. Worth every penny."</p>
+              <div class="testimonial__author">
+                <img src="https://picsum.photos/seed/client3/100/100" alt="Emma Wilson">
+                <div><h4>Emma Wilson</h4><span>Marketing Director, Nova</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonials__dots" id="tDots"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section class="section" id="contact">
+      <div class="container">
+        <p class="section__eyebrow reveal">Contact</p>
+        <h2 class="section__title reveal">Let's Work <span class="grad-text">Together</span></h2>
+        <p class="section__desc reveal">Have a project in mind? Send a message — I reply within 24 hours.</p>
+
+        <div class="contact">
+          <div class="contact__info reveal-left">
+            <!-- ✏️ CHANGE: Your contact details -->
+            <div class="contact__item shine">
+              <span class="contact__icon">📧</span>
+              <div><h4>Email</h4><a href="hajiqureshi8886@gmail.com">hajiqureshi8886@gmail.com</a></div>
+            </div>
+            <div class="contact__item shine">
+              <span class="contact__icon">📞</span>
+              <div><h4>Phone</h4><a href="tel:8884515458">+91 8884515458</a></div>
+            </div>
+            <div class="contact__item shine">
+              <span class="contact__icon">📍</span>
+              <div><h4>Location</h4><p>Bengaluru, India</p></div>
+            </div>
+          </div>
+
+          <form class="contact__form reveal-right" id="contactForm">
+            <div class="form-row">
+              <input type="text" name="from_name" placeholder="Your Name *" required>
+              <input type="email" name="from_email" placeholder="Your Email *" required>
+            </div>
+            <input type="text" name="subject" placeholder="Subject">
+            <textarea name="message" rows="5" placeholder="Tell me about your project... *" required></textarea>
+            <button type="submit" class="btn btn--primary magnetic" id="submitBtn">Send Message ✦</button>
+            <p class="form-status" id="formStatus"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <!-- ✏️ CHANGE: Your name -->
+      <p>© 2026 <span class="grad-text">rahman@</span>. Crafted with ♥</p>
+      <!-- ✏️ CHANGE: Your social URLs -->
+      <div class="footer__social">
+        <a href="https://github.com/hajiqureshi26" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/abdul-rahman-qureshi-0444672a8?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank">LinkedIn</a>
+        <a href="https://www.instagram.com/rahman_lala_26" target="_blank">Instagram</a>
+        <a href="https://x.com/HajiQureshi26" target="_blank">X</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ⬆️ BACK TO TOP -->
+  <button class="back-top" id="backTop" aria-label="Back to top">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
